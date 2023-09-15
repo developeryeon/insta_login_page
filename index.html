@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width = divice - width" initial scale = "1.0">
+        <title>Instagram login</title>
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "app.js"></script>
+    </head>
+    <body>
+        <nav id = "container_main"> <!--container-->
+            <section class="wrap_first_page"> <!--loginMain-->
+            <!--로그인페이지 구현-->
+                <article class="login"> <!--login-->
+                    <div class="login_form"> <!--login__form__container-->
+                        <div class="wrap_logo"> <!--login__form-->
+                            <h1><img src="instagram_text_logo.png"/></h1>
+                        </div>
+
+                        <!--로그인 정보--> 
+                        <form method="post" name="wrap_login" action="/account/signin">
+                            <div class = "userid">
+                                <input type="text" id="userid" placeholder="전화번호, 사용자 이름 또는 이메일" required="required"> 
+                            </div>
+                            <div class = "password">                    
+                                <input id="password" type="password" placeholder="비밀번호" required>
+                            </div>
+
+                        <!--로그인 버튼-->    
+                            <button class="loginbutton" type="button">
+                                <span class="button_login">로그인</span>
+                            </button>
+
+                        <!--또는 구분선-->                                      
+                            <div class="or_line">
+                                <div class="br"></div>
+                                <div class="hr_select">또는</div>
+                                <div class="br"></div>                      
+                            </div>
+
+                        <!--페이스북 로그인-->
+                            <div class="facebook">
+                                <button class="facebook_icon" type="button">
+                                    <span class="facebook_logo">
+                                        <img src="facebook_logo.jpg" />
+                                    </span> 
+                                    <sapn class="facebook_login"> Facebook으로 로그인</sapn>
+                                </button>
+                            </div>
+
+                        <!--비밀번호 찾기-->
+                            <div class="find_pwd">
+                                <a class="find_pwd_link" href="/accounts/pw/reset/">                        
+                                비밀번호를 잊으셨나요?                      
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                
+                <!--계정이 없으신가요 회원가입-->      
+                    <div class="wrap_sign"> 
+                        <span>계정이 없으신가요?</span><a href="/accounts/sign/in/">가입하기</a>
+                    </div>
+                <!--계정이 없으신가요 finish-->
+                </article>
+            </section>
+        </nav>               
+    </body>
+</html>
+
+

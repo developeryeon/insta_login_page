@@ -1,0 +1,162 @@
+
+* {
+    flex-direction: column;
+    box-sizing: border-box;
+    outline-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 홈페이지 정중앙 */
+#container_main {
+    display:flex;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;   
+}
+
+.wrap_first_page {
+    background-color: white;
+    max-width: 350px;
+    height: auto;
+    margin: 100px auto;
+}
+
+
+.login_form,
+.wrap_sign {
+    padding: 40px 40px 20px;
+    border: 1px solid rgb(169, 192, 215);
+    background-color: white;
+    text-align: center;
+    padding: 40px 40px 20px;
+}
+
+.login_form {
+    margin-bottom: 10px;
+}
+
+
+.wrap_logo {
+   padding: 0 auto 2px;
+}
+
+
+.wrap_logo img {       /*img 태그를 넣어야지 적용된다.*/
+    width: 190px;
+    height: auto;
+    display: block;
+    position: relative;
+    top: -60px;
+    margin: 10px auto 10px;
+}
+
+.userid input{
+    margin-bottom: 2px;
+    position: relative;
+    bottom: 90px;
+    width: 250px;
+    height: 35px;
+    font-size: 13px;
+    background-color: rgb(247, 248, 249);
+    border: 1px solid rgb(212, 215, 219);
+}
+
+.password input{
+    position: relative;
+    bottom: 85px;
+    width: 250px;
+    height: 35px;
+    font-size: 13px;
+    background-color: rgb(247, 248, 249);
+    border: 1px solid rgb(212, 215, 219);
+    text-overflow: ellipsis;
+}
+
+.loginbutton {
+    background-color: rgb(107, 171, 248);
+    border: 1px solid white;
+    color: white;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+/*구분선 가운데 글자 넣기, hr 태그는 수평 가로선을 정의함.*/
+
+
+.or_line { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:rgba(163, 163, 164, 0.843);
+    font-size: 10px;
+    position: relative;
+    bottom: -75px;
+}
+
+
+
+.facebook {
+    cursor: pointer;
+    width: auto;
+    position: relative;
+    bottom: 35px;
+    left: 32px;
+}
+
+
+.facebook_icon {
+    background-color: white;
+    color:#385185;
+    border: 0px;
+    font-size: 15px;
+    display: inline-block;    
+    font-weight: bold;       
+}
+
+
+.facebook_logo img {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+}
+
+.find_pwd {
+    height: 16px;
+    float: none;
+    padding: 10px 0px;
+    margin: 0px 0px 10px;
+}
+
+.find_pwd_link {
+    color: rgba(168, 168, 168, 0.595);
+    text-decoration: none;
+    display: block;  /*display block후에 text-align이 적용됨*/
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.wrap_sign span {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+.wrap_sign a {
+   color: rgba(82, 115, 247, 0.915);
+   text-decoration: none;
+   font-weight: 600;
+}
+
+
+
+
+
