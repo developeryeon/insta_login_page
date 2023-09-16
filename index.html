@@ -1,71 +1,66 @@
 <!DOCTYPE html>
-<lang="ko">
+<HTML lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta name = "viewport" content = "width = divice - width" initial scale = "1.0">
-        <title>Instagram login</title>
-        <link rel = "stylesheet" href = "style.css">
-        <script src = "app.js"></script>
+        <meta name="viewport" content="width=device-width", content="height=device-height", initial scale="1.0", minimum-scale="1", maximum-scale="2", viewport-fit="cover">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>instagram login</title>
+        <link rel="stylesheet" href="style.css">
+        <script src = "login-ins.js"></script> 
     </head>
     <body>
-        <nav id = "container_main"> 
-            <section class="wrap_first_page"> 
-            <!--로그인페이지 구현-->
-                <article class="login"> 
-                    <div class="login_form"> 
-                        <div class="wrap_logo"> 
-                            <h1><img src="instagram_text_logo.png"/></h1>
-                        </div>
+      <main>
+        <section id="wrap_login_page">
+            <form id="login_form" method="post" action="/account/login/">
+                <fieldset> <!--로고,아이디,비번-->
+                    <!--로고-->
+                    <h1>
+                        <img src="instagram_text_logo.png" alt="instagram_logo">
+                    </h1>
 
-                        <!--로그인 정보--> 
-                        <form method="post" name="wrap_login" action="/account/signin">
-                            <div class = "userid">
-                                <input type="text" id="userid" placeholder="전화번호, 사용자 이름 또는 이메일" required="required"> 
-                            </div>
-                            <div class = "password">                    
-                                <input id="password" type="password" placeholder="비밀번호" required>
-                            </div>
+                    <legend class="skip"></legend>
+                    <ul>
+                        <li>
+                            <span id="user_id"></span>
+                            <div><input type="text" name="user_id" id="id_user" placeholder="전화번호, 사용자 이름 또는 이메일" required></div>
+                        </li>
+                        <li class="error_id_hide">죄송하지만 아이디가 올바르지 않습니다.</li>
+                        <li>
+                            <span id="pwd_user"></span>
+                            <div><input type="password" name="user_pwd" id="pwd_user" placeholder="비밀번호" required></div>
+                            <span class="pw_hide"></span>
+                        </li>
+                        <li class="error_pwd_hide">죄송하지만 비밀번호가 올바르지 않습니다.</li>
+                    </ul>
 
-                        <!--로그인 버튼-->    
-                            <button class="loginbutton" type="button">
-                                <span class="button_login">로그인</span>
-                            </button>
+                    <!--로그인 버튼-->
+                    <button input type="submit" id="login_button">로그인</button>
 
-                        <!--또는 구분선-->                                      
-                            <div class="or_line">
-                                <div class="br"></div>
-                                <div class="hr_select">또는</div>
-                                <div class="br"></div>                      
-                            </div>
-
-                        <!--페이스북 로그인-->
-                            <div class="facebook">
-                                <button class="facebook_icon" type="button">
-                                    <span class="facebook_logo">
-                                        <img src="facebook_logo.jpg" />
-                                    </span> 
-                                    <sapn class="facebook_login"> Facebook으로 로그인</sapn>
-                                </button>
-                            </div>
-
-                        <!--비밀번호 찾기-->
-                            <div class="find_pwd">
-                                <a class="find_pwd_link" href="/accounts/pw/reset/">                        
-                                비밀번호를 잊으셨나요?                      
-                                </a>
-                            </div>
-                        </form>
+                    <!--수직바-->
+                    <div id="line">
+                        <hr class="hr">
+                        <span class="or">또는</span>
+                        <hr class="hr">
                     </div>
-                
-                <!--계정이 없으신가요 회원가입-->      
-                    <div class="wrap_sign"> 
-                        <span>계정이 없으신가요?</span><a href="/accounts/sign/in/">가입하기</a>
-                    </div>
-                <!--계정이 없으신가요 finish-->
-                </article>
-            </section>
-        </nav>               
+
+                    <!--페이스북 로그인-->
+                    <div class="facebook"><button input type="button" id="facebook_sign_in"><img src="facebook_logo.jpg" alt="facebook_logo">Facebook으로 로그인하기</button></div>
+                    <!--비밀번호를 잊으셨나요-->
+                    <div class="find_pwd"><button input type="button" id="find_pwd">비밀번호를 잊으셨나요?</button></div>
+                </fieldset>
+            </form>
+            
+            <!--계정 만들러가기-->
+            <form id="sign_in" method="post" action="/account/sign/in">
+                <fieldset>
+                    <legend class="skip"></legend>
+                    <ul>
+                        <li>계정이 없으신가요?<span class="join" input type="button" action="/account/join/">가입하기</span></li>
+                    </ul>
+                </fieldset>
+            </form>
+        </section>
+      </main>
     </body>
-</html>
-
+</HTML>
 
