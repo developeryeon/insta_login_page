@@ -1,160 +1,155 @@
-
 * {
-    flex-direction: column;
     box-sizing: border-box;
-    outline-style: none;
-    margin: 0;
-    padding: 0;
+}
+
+html, body, h1, ul, ol, li, a, img, p, div, header, nav, main, article, section, form, fieldset,legend {
+    list-style: none; 
     text-decoration: none;
-    list-style: none;
 }
 
-/* 홈페이지 정중앙 */
-#container_main {
-    display:flex;
-    flex-grow: 1;
-    height: 100%;
-    width: 100%;   
+.skip {
+    display: none;
 }
 
-.wrap_first_page {
+.a {
+    text-decoration: none;
+}
+
+main {
+    height: 520px;
+}
+#wrap_login_page {
+    width: 320px; margin: 0 auto;
+}
+main #wrap_login_page {text-align: center; margin: 100px auto 10px;}
+main #wrap_login_page #login_form {border: 1px solid rgb(188, 188, 189);}
+main #wrap_login_page #login_form fieldset{border: 0;}
+main #wrap_login_page #login_form fieldset h1 {
     background-color: white;
-    max-width: 350px;
-    height: auto;
-    margin: 100px auto;
+}
+main #wrap_login_page #login_form fieldset h1 img {
+    width:174px; height: 65px; margin-top: 15px;
 }
 
-
-.login_form,
-.wrap_sign {
-    padding: 40px 40px 20px;
-    border: 1px solid rgb(169, 192, 215);
-    background-color: white;
-    text-align: center;
-    padding: 40px 40px 20px;
+main #wrap_login_page #login_form fieldset {
+    list-style: none; list-style-type: none;
 }
 
-.login_form {
-    margin-bottom: 10px;
+main #wrap_login_page #login_form fieldset ul {
+   margin: 15px 0; padding: 0;
+}
+main #wrap_login_page #login_form fieldset ul li {
+    width: 100%; margin: 0 auto;  
 }
 
-
-.wrap_logo {
-   padding: 0 auto 2px;
+main #wrap_login_page #login_form fieldset ul #user_id input {
+    box-shadow: none;
 }
 
-
-.wrap_logo img {       /*img 태그를 넣어야지 적용된다.*/
-    width: 190px;
-    height: auto;
-    display: block;
-    position: relative;
-    top: -60px;
-    margin: 10px auto 10px;
+main #wrap_login_page #login_form fieldset ul #id_user {
+    width: 90%; margin:0; padding: 0; height: 36px;
+    background-color: rgb(240, 238, 238);  
+    border-radius: 3px; border-color: rgb(232, 231, 231);
+    box-shadow: none;
+}
+main #wrap_login_page #login_form fieldset ul #pwd_user {
+    background-color: rgb(240, 238, 238);
+    border-radius: 3px; border-color: rgb(232, 231, 231);
+    width: 90%; height: 36px;
+    margin-top: 10px; margin-bottom: 10px;
+    box-shadow: none;
 }
 
-.userid input{
-    margin-bottom: 2px;
-    position: relative;
-    bottom: 90px;
-    width: 250px;
-    height: 35px;
-    font-size: 13px;
-    background-color: rgb(247, 248, 249);
-    border: 1px solid rgb(212, 215, 219);
+main #wrap_login_page #login_form fieldset ul li.error_id_hide {
+    display: none; 
 }
-
-.password input{
-    position: relative;
-    bottom: 85px;
-    width: 250px;
-    height: 35px;
-    font-size: 13px;
-    background-color: rgb(247, 248, 249);
-    border: 1px solid rgb(212, 215, 219);
-    text-overflow: ellipsis;
+main #wrap_login_page #login_form fieldset ul li.error_pwd_hide {
+    display: none;
 }
-
-.loginbutton {
-    background-color: rgb(107, 171, 248);
-    border: 1px solid white;
-    color: white;
-    width: 250px;
-    height: 35px;
-    border-radius: 10px;
-    position: relative;
-    bottom: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}
-/*구분선 가운데 글자 넣기, hr 태그는 수평 가로선을 정의함.*/
-
-
-.or_line { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color:rgba(163, 163, 164, 0.843);
-    font-size: 10px;
-    position: relative;
-    bottom: -75px;
-}
-
-
-
-.facebook {
+main #wrap_login_page #login_form fieldset ul li span {}
+main #wrap_login_page #login_form fieldset ul li span input {}
+main #wrap_login_page #login_form fieldset ul li span input[type=text]{}
+main #wrap_login_page #login_form fieldset ul li span input[type=password]{}
+main #wrap_login_page #login_form fieldset ul li #id_user {}
+main #wrap_login_page #login_form fieldset ul li #pwd_user {}
+main #wrap_login_page #login_form fieldset ul li .pw_hide {}
+main #wrap_login_page #login_form fieldset #login_button {
+    background-color: rgb(88, 194, 236); margin: 20px auto;
+    width: 90%; color:white; padding:20px 0; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px; border-radius: 10px; font-weight: 600;
     cursor: pointer;
-    width: auto;
-    position: relative;
-    bottom: 35px;
-    left: 32px;
+}
+main #wrap_login_page #login_form fieldset #login_button input[type=submit]{
+
+}
+main #wrap_login_page #login_form fieldset #line {
+    display: flex; flex-flow:row nowrap;
+    padding:10px 0; 
+}
+main #wrap_login_page #login_form fieldset #line .hr {
+    border: 1px solid rgb(188, 188, 189);
+    height: 1px;
+    width: 110px;  
+}
+main #wrap_login_page #login_form fieldset #line .or {
+    display: flex; text-align: center; justify-content: center;
+    color: rgb(128, 128, 128); font-size: 14px; font-weight: 600;
+    margin: 0px 5px 5px 10px; padding-bottom: 16px;
 }
 
-
-.facebook_icon {
+main #wrap_login_page #login_form fieldset .facebook button{
+    border: 0; 
+}
+main #wrap_login_page #login_form fieldset #facebook_sign_in {
+    color: rgb(7, 7, 107); font-weight: 600; font-size: 14px; cursor: pointer;
     background-color: white;
-    color:#385185;
-    border: 0px;
-    font-size: 15px;
-    display: inline-block;    
-    font-weight: bold;       
+}
+main #wrap_login_page #login_form fieldset #facebook_sign_in img{
+    width: 16px; height: 16px; margin-right: 5px;
 }
 
+main #wrap_login_page #login_form fieldset .facebook button input[type=button] {}
+main #wrap_login_page #login_form fieldset .find_pwd button input[type=button] {}
 
-.facebook_logo img {
-    width: 15px;
-    height: 15px;
-    margin-right: 4px;
+main #wrap_login_page #login_form fieldset .find_pwd button{
+    border: 0;
 }
 
-.find_pwd {
-    height: 16px;
-    float: none;
-    padding: 10px 0px;
-    margin: 0px 0px 10px;
+main #wrap_login_page #login_form fieldset #find_pwd {
+    font-size: 12px; color: rgb(62, 62, 62); cursor: pointer;
+    background-color: white;
+    margin: 20px auto 15px;
 }
 
-.find_pwd_link {
-    color: rgba(168, 168, 168, 0.595);
-    text-decoration: none;
-    display: block;  /*display block후에 text-align이 적용됨*/
-    text-align: center;
-    font-size: 12px;
+main #wrap_login_page #sign_in{
+    margin-top:10px; height: 61px;
+    border: 1px solid rgb(188, 188, 189);
+    display: flex; align-items: center; justify-content: center; text-align: center;
 }
 
-
-.wrap_sign span {
+main #wrap_login_page #sign_in fieldset { 
+    border: 0; 
+    height: 41px;
+}
+main #wrap_login_page #sign_in fieldset ul {
+    margin-top: 0; margin-right: 40px;
+    align-items: center; justify-content: center;
+}
+main #wrap_login_page #sign_in fieldset ul li {
     font-size: 14px;
-    font-weight: 200;
 }
+main #wrap_login_page #sign_in fieldset ul li .join {
+    font-weight: 600; color: rgb(57, 169, 225);
+    margin-left: 5px; cursor: pointer;
+}
+main #wrap_login_page #sign_in fieldset ul li .join input[type=button] {}
 
 
-.wrap_sign a {
-   color: rgba(82, 115, 247, 0.915);
-   text-decoration: none;
-   font-weight: 600;
-}
+
+
+
+
 
 
 
